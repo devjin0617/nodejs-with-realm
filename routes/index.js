@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Realm = require('../util/realm');
+var Realm = require('./lib/realm');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -35,7 +35,7 @@ router.get('/:name', (req, res) => {
 
 router.post('/', (req, res) => {
 
-  var name = req.body.title;
+  var name = req.body.name;
   var email = req.body.email;
   var tel = req.body.tel;
 
